@@ -8,9 +8,14 @@ screen_height = 800
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Pygame Screen")
 
+
 player_img = pygame.image.load("Default.png")
 player_img = pygame.transform.scale(player_img, (75, 100))
 player = player_img.get_rect(center = (50, 650))
+
+grass_img = pygame.image.load("Grass.png")
+grass_img = pygame.transform.scale(grass_img, (100, 100))
+grass = grass_img.get_rect(center = (0, 800))
 
 BLUE = (0, 0, 255)
 
@@ -23,6 +28,7 @@ while running:
     screen.fill((135, 206, 235))
     
     screen.blit(player_img, player)
+    screen.blit(grass_img, grass)
 
     pygame.display.flip()
 
